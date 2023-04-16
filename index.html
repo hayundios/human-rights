@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title> Welcome to EMORH</title>
+
+    <script>
+
+    </script>
+</head>
+    
+    <header>
+        <nav>
+            <div class="navleft"> 
+                <ul>
+                <img src="images/Logo.jpeg" alt="" class="navlogo">
+                </ul>
+                <h3> EMORH HUMAN RIGHTS DEFENDER</h3>
+            </div> <!-- left part of nav-->
+        
+            <div class="navright">
+                <ul>
+                    <li>
+                        <a href="index.php" class="navoptions">Home</a>
+                    </li>
+                    <li>
+                        <a href="goals.php" class="navoptions">Our goals</a>
+                    </li>
+                    <li>
+                        <a href="#emailUs" class="navoptions">Email Us</a>
+                    </li>
+                    <li>
+                        <a href="#contacts" class="navoptions">Contacts</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body>
+    <div class="section">
+        <div class="about">
+            <div class="whyproblems">
+                <h2>Why problems on your:</h2>
+                <br>
+                <p>*Landlord/tenant Disputes *Employer/Employee Disputes *Unlawful Retrenchment</p>
+                <p>*Employee compensation Disputes *Family Disputes(including marital)</p>
+                <p>*Propert Inheritance Disputes/Child custody etc *Monetary claims</p>
+                <p>*Commercial Disputes *Local Disputes(Community Dispute)</p>
+                <p>*Unlawful Detention *Land Grabber (Omo Onile or Agent)</p>
+                <p>Unlawful Tax And Multiple Tax, Pension Issues</p>
+            </div>
+        </div>
+    
+        <div class="formArea" id="emailUs">
+            <div class="form-image">
+                <img src="images/WhatsApp Image 2023-02-04 at 12.39.10 PM.jpeg" alt="">
+            </div>
+            <div class="form2" >
+                <form  method="POST" class="contactform" id="contactform">    
+                    <h1>Report to us</h1>
+                    <p style="color:antiquewhite;">You can email us and hear from us directly.</p>
+                        <input class="input-field" type="text" placeholder="Firstname" name="firstName">
+                        <input class="input-field" type="text" placeholder="Lastname" name="lastName">
+                        <input class="input-field" type="email" placeholder="Your E-mail" name="eMail">
+                        <input class="input-field" type="tel" placeholder="Your Phone" name="phone">
+                        <label for="states">Practice area:</label>
+                        <select id="states">
+                            <option name="" id="">Lagos</option>
+                            <option name="" id="">Abuja</option>
+                            <option name="" id="">Oyo</option>
+                        </select>
+                        <textarea class="input-field" id="formcommenttarea" placeholder="Your Message" name="comment"></textarea>
+                        <button type="submit" name="submit" id="submit">Submit</button>
+                </form>
+               
+            </div>
+        </div>
+
+    <div class="founders">
+        <p>Our Officials</p>
+             <div class="founderscontainers">
+        <div class="frame">
+ <img src="images/WhatsApp Image 2023-02-04 at 12.39.10 PM.jpeg" alt="" id="frameImage" onmouseover="displayInfo()" onmouseout="hideInfo()">
+          
+            <div id="foundersInfo" class="foundersInfo" onmouseover="displayInfo()" onmouseout="hideInfo()">
+                <div class="fI1"><p>Michael Ajafeto</p><span>President</span></div>
+                <div class="fI2" id="fI2" > 
+
+            </div>
+        </div>
+        </div><!--closing tag for frame-->  
+        <div class="frame"></div>
+        <div class="frame"></div>
+            </div>
+    </div>
+                        
+         <footer id="footer">
+                <div class="footer-1">
+                    <div class="address">
+                        <h3>NATIONAL SECRETARIAT</h3>
+                        <P>PLOT 1/2 Human Right Close,Ogungbade Road,Onihale Phase II, Ifo, Ogun state.</P>
+                        <br>
+                        <h3>LAGOS STATE BRANCH:</h3>
+                        <P>No 45, Adewunmi Adebiyi Street, AraromiB/Stop,, Iyana Ipaja, Lagos.</P>
+                        <br>
+                        <h3>OGUN STATE BRANCH</h3>
+                        <P>Plot 6/8 Fadunsin/Arepo Road, Ogba'yo Ijoko</P>
+                        <br>
+                        <h3>ALL OUR ANNEXES</h3>
+                        <P style="font-size: small;">Shonde Unit, Ilupeju Unit, Ilaro Unit, Owode-Yewa Unit, Ota Unit, Oluke Unit, Ibafo Unit, Ogbayo-Ikorodu Unit.</P>
+                    </div>
+                </div>  
+                <div class="footer-up">
+                            <div class="f-up1"></div>
+                            <div class="f-up2"></div>
+                </div>
+            <div class="footer-2">
+                <div class="socialmedia">
+                    <h3>CALL US ON:</h3>
+                    <br>
+                    <P>07088865558</P>
+                    <br>
+                    <P>08027774155</P>
+                    <br>
+                    <P>08029235070</P>
+                    <br>
+                    <P>09023242326</P>
+                </div>
+            </div>
+         </footer>
+   </div> <!--closing the section class div-->
+
+   
+            <script>
+                console.log('Loaded')
+              function displayInfo(){
+                document.getElementById('fI2').style.display = 'block';
+                document.getElementById('foundersInfo').style.height = '60%';
+              }
+              function hideInfo(){
+                document.getElementById('fI2').style.display= 'none';
+                document.getElementById('foundersInfo').style.height = '20%';
+              }
+
+               //sending to the backend syntax
+              let submitButton = document.getElementById('submit');
+              let contactForm = document.getElementById('contactform');
+
+              contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+               
+                let formData = new FormData();
+                
+                document.querySelectorAll('.input-field').forEach(element => {
+                    formData.append(element.name, element.value) //append the data in input fields to each field
+                });
+                
+                let requestUrl = 'http://localhost/human-rights/create-consultation.php';
+
+                fetch(requestUrl, {
+                    method: "POST",
+                    body: formData
+                }).then(response => response.json()).then(response => {
+                    console.log("Response:", response)
+                    showResponseMessage()
+                }).catch(error => {
+                    console.log('Error:', error)
+                    errorMessage()
+                })
+             })
+
+            </script>
+
+</body>
+</html>
