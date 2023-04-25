@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: cursive;    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    
 }
 body{
     position: relative;
@@ -17,11 +17,12 @@ nav{
     position: fixed;
     top: 0;
     display: flex;
-    border-bottom:1.5px solid rgb(130, 157, 195);
-    background-color: #0072ef;
+    background-color:cadetblue;
     z-index: 10;
 }
-
+.fa-calendar{
+    display: none;
+}
 .navleft{
     width: 40%;
     height: 100%;
@@ -29,11 +30,12 @@ nav{
 }
 .navleft>h3{
     position: relative;
-    left: 1.7%;
-    top: 10%;
-    color: white;
+    left: 10px;
+    top: 65px;
+    color: whitesmoke;
     font-size: 135% ;
     height: 30%;
+    
 }
 .navright{
     width: 59.5%;
@@ -66,15 +68,18 @@ nav{
 .navoptions:hover{
     transition: .3s;
     font-size: 22px;
-    color: skyblue;
+    color: rgb(3, 3, 83);
 }
 .navoptions:active{
     color: lightgreen;
 }
+.mobileScreenNav{
+    display: none;
+}
 .about{
     width: 100%;
     height: 250px;
-    background-color:blue;
+    background-color: cadetblue;
 }
 .whyproblems{
     width: 96%;
@@ -93,7 +98,7 @@ nav{
     width: 100%;
     height: 500px;
     display: flex;
-    background-color: #242424;
+    background-color: whitesmoke;
     border: none;
 }
 .form-image{
@@ -122,21 +127,21 @@ nav{
     border: none;
 }
 .contactform>h1{
-    color: white;
+    color: navy;
     
 }
 form>input[type=text]{
     width:48% ;
     height: 15%;
     border: none;
-    border-bottom: 1px solid yellow;
-    background-color: #242424;
+    border-bottom: 1px solid cadetblue;
+    background-color:whitesmoke;
     margin-top: 5px;
-    color: antiquewhite;
+    color: navy;
 }
 ::placeholder{
-    color: antiquewhite;
-    top: 10px;
+    color: navy;
+    top: 20px;
     font-size: 17px;
     font-weight: 100;
 }
@@ -144,40 +149,40 @@ form>input[type=email]{
     width:48% ;
     height: 15%;
     border: none;
-    border-bottom: 1px solid yellow;
-    background-color: #242424;
+    border-bottom: 1px solid cadetblue;
+    background-color:whitesmoke;
     margin-top: 5px;
-    color: antiquewhite;
+    color: navy;
 
 }
 form>input[type=tel]{
     width:48% ;
     height: 15%;
     border: none;
-    border-bottom: 1px solid yellow;
-    background-color: #242424;
+    border-bottom: 1px solid cadetblue;
+    background-color: whitesmoke;
     margin-top: 5px;
-    color: antiquewhite;
+    color: navy;
 
 }
 select{
     margin-top: 20px;
-    background-color: #242424;
+    background-color: whitesmoke;
     border: none;
     width: 48%;
     text-align: right;
-    color: antiquewhite;
+    color: navy;
 }
 label{
-    color: antiquewhite;
+    color: navy;
 
 }
 #formcommenttarea{
     width: 96% ;
     height: 15%;
     border: none;
-    border-bottom: 1px solid yellow;
-    background-color: #242424;
+    border-bottom: 1px solid cadetblue;
+    background-color: whitesmoke;
     margin-top: 35px;
     color: antiquewhite;
 }
@@ -187,29 +192,28 @@ input:focus{
 #formTextarea:focus{
     outline-style: none;
 }
+#submit{
+   padding: 5px 10px;
+   border-radius: 3px;
+   position: relative;
+   top: 20px;
+   border: none;
+   background-color: cadetblue;
+}
 .founders{
     width: 100%;
     height: 600px;
 }
 
 .founders>p{
-    width: 15%;
+    width: 19%;
     margin: auto;
     margin-top: 3%;
-    color: #0072ef;
+    color: cadetblue;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
     font-size: 30px;
     font-weight:700;
 }
-.content>h2{
-    width: 15%;
-    margin: auto;
-    margin-top: 3%;
-    color: #0072ef;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
-    text-align: center;
-}
-
 .founderscontainers{
     width: 90%;
     height: 60%;
@@ -295,14 +299,14 @@ span{
     margin: auto;
     display: none;
 }
-footer{
+#footer{
     width: 100%;
     height: 400px;
-    border: 1px solid black;
-    background-color: #242424;
+    background-color: whitesmoke;
+    color: navy    ;
+    display: flex;
 }
 .content{
-    border: 1px solid red;
     width: 100%;
     height: 400px;
 }
@@ -315,14 +319,10 @@ footer{
     justify-content: space-between;
 }
 .box{
-    border: 1px solid black;
     border-radius: 3px;
     width: 48%;
     height: 100%;
 
-}
-#footer{
-    display: flex;
 }
 .footer-1{
     width: 48%;
@@ -331,23 +331,24 @@ footer{
 .footer-2{
     width: 48%;
     height: 100%;
+    display: flex;
 }
 .footer-up{
     width: 10%;
     height: 35%;
     position: relative;
-    top: -35px;
+    bottom: 49px;
     display: flex;
     flex-direction: column;
 }
-.f-up1{
-    height: 50%;
+.f-up1{ 
+    height: 50px;
     width: 50%;
     border: none;
-    border-right: 5px solid #242424;
+    border-right: 5px solid whitesmoke;
 }
 .f-up2{
-    height: 50%;
+    height: 50px;
     width: 50%;
     border: none;
     border-right: 5px solid white;
@@ -358,264 +359,1020 @@ footer{
     position: relative;
     left: 5%;
     top: 10%;
-    color: whitesmoke;
 }
-.socialmedia{
+.telephone{
+    height: 45%;
+    width: 25%;
+    position: relative;
+    left: 5%;
+    top: 10%;
+    line-height: 35px;
+}
+.telephone>h3{
+    position: relative;
+    width: 100%;
+}
+.whatsapp{
+    height: 30%;
+    width: 25%;
+    position: relative;
+    left: 5%;
+    top: 10%;
+    line-height: 35px;
+}
+.facebook{
+    position: relative;
+    height: 20%;
+    width: 25%;
+    top: 10%;
+    left: 5%;
+    line-height: 35px;
+}
+/*goals page*/
+.content{
+    color: cadetblue;
+    position: relative;
+    top: 10px;
+}
+.content>h2{
+    text-align: center;
+    
+}
+
+
+@media screen and (max-width:1000px) and (min-width:768px) {
+.fa-bars{
+    display: none;
+}
+.navleft{
+    width: 50%;
+    height: 100%;
+    display: flex; 
+}
+.navleft>h3{
+    position: relative;
+    left: 6px;
+    top: 90px;
+    color: white;
+    font-size: 17px;
+}
+.navright{
+    width: 50%;
+    height: 100%;
+}
+.navlogo{
+    height: 80px;
+    margin-left: 7%;
+    margin-top: 30px;
+    border: 3px solid white;
+}
+.navright>ul{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    width: 80%;
+    float: right;
+}
+.navoptions{
+   height: 100%;
+   padding: 10px 8px;
+   line-height: 200px;
+   text-decoration: none;
+   color: white;
+   font-size: 15px;
+}
+.navoptions>a{
+    list-style: none;
+    text-decoration: none;
+}
+.navoptions:hover{
+    transition: .3s;
+    font-size: 16px;
+    color: skyblue;
+}
+.navoptions:active{
+    color: lightgreen;
+}
+.about{
+    width: 100%;
+    height: 250px;
+}
+.whyproblems{
+    width: 96%;
+    height: 90%;
+    margin: auto;
+    color: white;
+    background-color:cadetblue;
+}
+.whyproblems>h2{
+    text-align: center;
+}
+.whyproblems>p{
+    text-align: center;
+    font-size: 17px;
+}
+
+.formArea{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    background-color: whitesmoke;
+        border: none;
+}
+.form-image{
+    width: 39.9%;
+    height: 80%;   
+    position: relative;
+    top: 9%;
+}
+.form-image>img{
+    position: relative;
+    width: 90%;
+    height: 100%;
+    left: 5%;
+    border-radius: 4px;
+}
+.form2{
+    width: 59.9%;
+    height: 100%;
+}
+.contactform{
+    border-radius: 5px;
+    height: 90%;
+    width: 80%;
+    margin: 4.5% 10% 0 10%;
+    position: relative;
+    border: none;
+}
+.contactform>h1{
+    color: navy;
+    
+}
+form>input[type=text]{
+    width:48% ;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid cadetblue;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    color: navy;
+}
+::placeholder{
+    color: navy;
+    top: 10px;
+    font-size: 17px;
+    font-weight: 100;
+}
+form>input[type=email]{
+    width:48% ;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid cadetblue;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    color: navy;
+
+}
+form>input[type=tel]{
+    width:48% ;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid cadetblue;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    color: navy;
+
+}
+select{
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border: none;
+    width: 48%;
+    text-align: right;
+    color: navy;
+}
+label{
+    color: navy;
+
+}
+#formcommenttarea{
+    width: 96% ;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid cadetblue;
+    background-color: whitesmoke;
+    margin-top: 35px;
+    color: navy;
+}
+input:focus{
+   outline-style: none;
+}
+#formTextarea:focus{
+    outline-style: none;
+}
+
+.founders{
+    width: 100%;
+    height: 600px;
+}
+.founders>p{
+    width: 25%;
+    margin: auto;
+    margin-top: 3%;
+    color: cadetblue;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+    font-size: 25px;
+    font-weight:700;
+}
+.founderscontainers{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    top: 13%;
+    position: relative;
+}
+.frame{
+    height: 100%;
+    width: 30%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+}
+.frame>img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 4px;
+}
+#showName{
+    display: none;
+}
+.foundersName{
+    position: absolute;
+    display: none;
+    width: 90%;
+    height: 20%;
+    background-color:#2f334b;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    transition-duration: 3s;
+    transition-delay: .2s;  
+    transition-timing-function: ease-in-out;
+}
+.foundersInfo{   
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    border-radius: 3px;
+    position: absolute;
+    background-color:#2f334b;
+    display: block;
+    bottom: 0;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+    animation-duration: 7s;
+}
+.foundersInfo:hover{
+    height: 60%;
+}
+
+#footer{
+    width: 100%;
+    height: 450px;
+    background-color: whitesmoke;
+    color: navy;
+    display: flex;
+}
+.content{
+    width: 100%;
+    height: 400px;
+}
+.boxes{
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    border-radius: 3px;
+    width: 48%;
+    height: 100%;
+
+}
+.footer-1{
+    width: 48%;
+    height: 100%;
+}
+.footer-2{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-up{
+    width: 10%;
+    height: 35%;
+    position: relative;
+    bottom: 41px;
+    display: flex;
+    flex-direction: column;
+}
+.f-up1{
+    height: 40px;
+    width: 50%;
+    border: none;
+    border-right: 5px solid whitesmoke;
+}
+.f-up2{
+    height: 40px;
+    width: 50%;
+    border: none;
+    border-right: 5px solid white;
+}
+.address{
     height: 80%;
     width: 80%;
     position: relative;
     left: 5%;
     top: 10%;
-    color: whitesmoke;
-
 }
-@media (1px <= width <= 2000px) {
-    #foundersName{
-        transition-duration: 1s;
-        transition-timing-function: ease-in-out;
-    }
-}
-@media (1024px <= width <= 2000px){
-    .navleft>h3{
-        margin-top: 11%;
-    } .founders>p{
-        font-size: 23px;
-    }
-    
-}
-@media (810px <= width <=1024px ){
-    .navleft>h3{
-        margin-top: 10%;
-    }
-    .founders>p{
-        font-size: 23px;
-        width: 27%;
-        text-align: center  ;
-    }
-    .navright{
-        width: 55%;
-        position: relative;
-        right: 5px;
-    }
-    .navoptions{
-        padding: 0 0 0 29px;
-    }
-  .navlogo{
+.telephone{
     position: relative;
-    top: 15%;
-  }
-  .founderscontainers{
-    top: 10%;
+    width: 10%;
+}
+.whatsapp{
+     position: relative;
+    width: 30%;
+    height: 50%;
+}
+.facebook{
     position: relative;
-  }
-  .founders{
-    height: 500px;
-}
-.contactform{
-    height: 86%;
+    width: 30%;
+    height: 50%;
 }
 }
-@media(600px <= width <= 768px) {
-    .navleft>h3{
-        margin-top: 30px;
-        font-size: 15px;
-        height:50% ;    
-      
-        border: 1px solid black;
-    }
-    .navright{
-        width: 58%;
-    }
-    .navoptions{
-        padding:0px 0px 0 12px;
-        font-size: 15px;
-        padding-right: 2px;
-    }
-    .founders>p{
-        font-size: 20px;
-        width: 35%;
-        text-align: center;
-    }
-    .section{
-        position: relative;
-        top: -20px;
-    }
-    .form-image>img{
-        border: 1px solid green;
-        top:-14px;
-    }
-    .founders{
-        height: 400px;
-    }
-    .contactform{
-        height: 85%;
-    }
-}
-@media (768px <= width <= 821px){
-    .navleft>h3{
-        position: relative;
-        top: 31.5%;
-        left: 6px;
-        font-size: 18px;
-
-    }
-    .navlogo{
-        position: relative;
-        top: 20%;
-    }
-    .navright{
-        width: 65%;
-    }
-    .navright>ul{
-       width: 100%;
-       float: right ;  
-    }
-    .navoptions{
-        padding:0 10px 0 10px;
-        line-height: 160px;
-        text-decoration: none;
-        font-size: 18px;
-        color: white;
-        position: relative;
-        right:-60px ;
-     }
-     .founders{
-        height: 400px;
-    }
-     .founders>p{
-        font-size: 20px;
-        width: 40%;
-        text-align: center;
-    }
-    .founderscontainers{
-        width: 96%;
-        position: relative;
-    }
-    .contactform{
-        height: 85%;
-    }
-}
-
-@media (360px <= width <= 599px){
-    .navright{
+@media screen and (max-width:768px) and (min-width:600px){
+    .fa-bars{
         display: none;
-    }   
-    .navleft>h3{
-        font-size: 16px;
-        position: relative;
-        top: 50%;
-        line-height: 60px;
-        height: 50%;
     }
     .navleft{
-        width: 100%;
+        width: 50%;
+        height: 100%;
+        display: flex; 
+    }
+    .navleft>h3{
+        position: relative;
+        left: 6px;
+        top: 93px;
+        color: white;
+        font-size: 12px;
+    }
+    .navright{
+        width: 50%;
         height: 100%;
     }
     .navlogo{
         height: 80px;
-        margin-top: 5px;
+        margin-left: 7%;
+        margin-top: 30px;
+        border: 3px solid white;
     }
-    nav{
-        height: 90px;
-    }
-    .section{
-        position: relative;
-        top: -20px;
+    .navright>ul{
+        display: flex;
+        list-style: none;
+        height: 100%;
+        width: 90%;
+        float: right;
     }
     .navoptions{
-        position: relative;
-        right:-50px ;
+       height: 100%;
+       padding: 5px 6px;
+       line-height: 200px;
+       text-decoration: none;
+       color: white;
+       font-size: 13px;
     }
-    .founders>p{
-        font-size: 30px;
-        width: 40%;
-        text-align: center;
+    .navoptions>a{
+        list-style: none;
+        text-decoration: none;
     }
-    .founders{
-        height: 1200px;
+    .navoptions:hover{
+        transition: .3s;
+        font-size: 16px;
+        color: navy;
     }
-    .founderscontainers{
-        width: 55%;
-        height: 1050px;
-        top: 4%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        border-radius: 4px;
+    .navoptions:active{
+        color: lightgreen;
+    }
+    
+    .about{
+    width: 100%;
+    height: 250px;
+    background-color:cadetblue;
+    }
+    .whyproblems{
+    width: 96%;
+    height: 90%;
+    margin: auto;
+    color: white;
+}
+.whyproblems>h2{
+    text-align: center;
+}
+.whyproblems>p{
+    text-align: center;
+    font-size: 15px;
+}
+.form-image{
+    width: 39.9%;
+    height: 60%;   
+    position: relative;
+    top: 9%;
+}
+.form-image>img{
+    position: relative;
+    width: 90%;
+    height: 100%;
+    left: 5%;
+    border-radius: 4px;
+}
 
-    }
-    .form-image{
-        height: 70%;
-    }
-    .frame{
-        height: 300px;
+.founders{
+    width: 100%;
+    height: 600px;
+}
+.founders>p{
+    width: 25%;
+    margin: auto;
+    margin-top: 3%;
+    color: cadetblue;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+    font-size: 20px;
+    font-weight:700;
+}
+.founderscontainers{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    top: 13%;
+    position: relative;
+}
+.frame{
+    height: 80%;
+    width: 30%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+}
+.frame>img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 4px;
+}
+#showName{
+    display: none;
+}
+.foundersName{
+    position: absolute;
+    display: none;
+    width: 90%;
+    height: 20%;
+    background-color:#2f334b;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    transition-duration: 3s;
+    transition-delay: .2s;  
+    transition-timing-function: ease-in-out;
+}
+.foundersInfo{   
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    border-radius: 3px;
+    position: absolute;
+    background-color:#2f334b;
+    display: block;
+    bottom: 0;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+    animation-duration: 7s;
+}
+.foundersInfo:hover{
+    height: 60%;
+}
+
+#footer{
+    width: 100%;
+    height: 400px;
+    background-color: whitesmoke;
+    color: navy;
+    display: flex;
+    font-size: 12px;
+}
+.content{
+    width: 100%;
+    height: 400px;
+}
+.boxes{
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    border-radius: 3px;
+    width: 48%;
+    height: 100%;
+
+}
+.footer-1{
+    width: 48%;
+    height: 100%;
+}
+.footer-2{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-up{
+    width: 10%;
+    height: 35%;
+    position: relative;
+    bottom: 49px;
+    display: flex;
+    flex-direction: column;
+}
+.f-up1{
+    height: 50px;
+    width: 50%;
+    border: none;
+    border-right: 5px solid whitesmoke;
+}
+.f-up2{
+    height: 50px;
+    width: 50%;
+    border: none;
+    border-right: 5px solid white;
+}
+.address{
+    height: 80%;
+    width: 80%;
+    position: relative;
+    left: 5%;
+    top: 10%;
+   
+}
+.telephone{
+    height: 40%;
+    width: 80%;
+    position: relative;
+    left: 5%;
+    top: 10%;
+    line-height: 30px;
+}
+.whatsapp{
+    line-height: 30px;
+    height: 20%;
+}
+
+}
+@media screen and (max-width:600px) and (min-width:2px){
+    nav{
+        height: 100px;
         width: 100%;
+        position: fixed;
+        top: 0;
+        display: flex;
+        background-color: cadetblue;
+        z-index: 10;
     }
-    .form2{
-        height: 70%;
-        width: 80%;
+    .mobileScreenNav{
+        display: block;
+    }
+    body{
+        position: relative;
+        top: 100px;
+    }
+    .navleft{
+        width: 90%;
+        height: 100%;
+        display: flex;  
+    }
+    .navleft>h3{
+        position: relative;
+        left: 10px;
+        top: 80px;
+        color: white;
+        font-size: 12px ;
+        height: 30%;
         
     }
+    .navright{
+      display: none;
+    }
+    .navlogo{
+        height: 80px;
+        margin-left: 7%;
+        margin-top: 15px;
+        border: 3px solid white;
+    }
+    .navright>ul{
+        display: flex;
+        list-style: none;
+        height: 100%;
+        float: right;
+    }
+    .navoptions{
+       height: 100%;
+       padding: 10px 34px;
+       line-height: 160px;
+       text-decoration: none;
+       color: white;
+       font-size: 20px;
+    }
+    .navoptions>a{
+        list-style: none;
+        text-decoration: none;
+    }
+    .navoptions:hover{
+        transition: .3s;
+        font-size: 22px;
+        color: skyblue;
+    }
+    .navoptions:active{
+        color: lightgreen;
+    }
+    
+    .whyproblems{
+        width: 96%;
+        height: 90%;
+        margin: auto;
+        color: white;
+    }
+    .whyproblems>h2{
+        text-align: center;
+        position: relative;
+        top: 8px;
+    }
+    .whyproblems>p{
+        text-align: center;
+        font-size: 12px;
+    }
+    
+.formArea{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+.form-image{
+    width: 70%;
+    height: 300px;   
+    position: relative;
+    top: 20px;
+    margin :auto;
+}
+.form-image>img{
+    position: relative;
+    width: 90%;
+    height: 100%;
+    left: 5%;
+    border-radius: 4px;
+}
+.form2{
+    width: 80%;
+    height: 500px;
+    margin: auto;
+}
+.contactform{
+    border-radius: 5px;
+    height: 90%;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    font-size: 15px;
+}
+.contactform>h1{
+    color: navy;
+    
+}
+form>input[type=text]{
+    width:48% ;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid cadetblue;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    color: navy;
+}
+::placeholder{
+    color: navy;
+    top: 10px;
+    font-size: 17px;
+    font-weight: 100;
+}
+form>input[type=email]{
+    width:48% ;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid cadetblue;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    color: navy;
 
 }
-@media (500px <= width <= 600px){
-    .contactform{
-        height: 95%;
-    }
-    .form2{
-        border: 1px solid yellow;
-        height: 86%;
-    }
+form>input[type=tel]{
+    width:48% ;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid cadetblue;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    color: navy;
+
 }
-@media (1px <= width <= 500px) {
-    .founders{
-        height: 1300px;
-    }
-    .founderscontainers{
-        width: 70%;
-        border: 1px solid black;
-    }
-    .section{
-        position: relative;
-        top: -20px;
-    }
-    .navleft>h3{
-        border: 1px solid yellow;
-        width: 80%;
-        font-size: 14px;
-        position: relative;
-        top: 50%;
-    }
-    .formArea{
-        border: 1px solid yellow;
-        height: 750px;
-        display: flex;
-        flex-direction: column;
-    }
-    .form-image{
-        border: 1px solid yellow;
-        width: 50%;
-        height: 300px;
-        position: relative;
-        top: 10px;
-        left: 20%;
-    }
-    .form2{
-        position: relative;
-        left: 10%;
-        height: 450px;
-    }
-    .contactform{
-        height: 94%;
-    }
+select{
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border: none;
+    width: 48%;
+    text-align: right;
+    color: navy;
 }
-@media (250px <= width <= 300px){
-    .navleft>h3{
-        font-size: 10px;
-    }
-    .founders>p{
-        font-size: 20px;
-        width: 50%;
-        text-align: center;
-    }
+label{
+    color: navy;
+
+}
+#formcommenttarea{
+    width: 96% ;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid cadetblue;
+    background-color: whitesmoke;
+    margin-top: 35px;
+    color: navy;
+}
+input:focus{
+   outline-style: none;
+}
+#formTextarea:focus{
+    outline-style: none;
+}
+#submit{
+   padding: 5px 10px;
+   border-radius: 3px;
+   position: relative;
+   top: 30px;
+   color: navy;
+}
+
+.founders{
+    width: 100%;
+    height: 1000px;
+}
+
+.founders>p{
+    width: 35%;
+    margin: auto;
+    margin-top: 5%;
+    color: cadetblue;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+    font-size: 17px;
+    font-weight:700;
+}
+
+.founderscontainers{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-between;
+    top: 50px;
+    position: relative;
+}
+.frame{
+    height: 30%;
+    width: 80%;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+}
+.frame>img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 4px;
+}
+#showName{
+    display: none;
+}
+.foundersName{
+    position: absolute;
+    display: none;
+    width: 90%;
+    height: 20%;
+    background-color:#2f334b;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    transition-duration: 3s;
+    transition-delay: .2s;  
+    transition-timing-function: ease-in-out;
+}
+.foundersInfo{   
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    border-radius: 3px;
+    position: absolute;
+    background-color:#2f334b;
+    display: block;
+    bottom: 0;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+    animation-duration: 7s;
+
+}
+.foundersInfo:hover{
+    height: 60%;
+}
+
+.fI1{
+    height:30%;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    top: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.fI1>p{
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+   
+}
+span{
+    color: #9e8840;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: right;
+    width: 50%;
+}
+.fI2{
+    width:  70%;
+    height: 60%;
+    margin: auto;
+    display: none;
+}
+
+#footer{
+    width: 100%;
+    height: 400px;
+    background-color: whitesmoke;
+    color: navy;
+    display: flex;
+}
+.content{
+    width: 100%;
+    height: 400px;
+}
+.boxes{
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    border-radius: 3px;
+    width: 48%;
+    height: 100%;
+
+}
+.footer-1{
+    width: 48%;
+    height: 100%;
+}
+.footer-2{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-up{
+    width: 10%;
+    height: 35%;
+    position: relative;
+    bottom: 49px;
+    display: flex;
+    flex-direction: column;
+}
+.f-up1{
+    height: 50px;
+    width: 50%;
+    border: none;
+    border-right: 5px solid whitesmoke;
+}
+.f-up2{
+    height: 50px;
+    width: 50%;
+    border: none;   
+    border-right: 5px solid white;
+}
+.address{
+    height: 80%;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    top: 5%;
+   font-size: 10px;
+}
+.telephone{
+    height: 40%;
+    width: 50%;
+    position: relative;
+    left: 5%;
+    top: 5%;
+    font-size: 10px;
+    line-height: 30px;
+}
+.whatsapp{
+    font-size: 12px;
+    line-height: 30px;
+    height: 20%;
+}
+.facebook{
+    font-size: 12px;
+    line-height: 30px;
+}
+.dropdownBox{
+    width: 150px;
+    height: 300px;
+    background: whitesmoke;
+    position: fixed;
+    right: 25px;
+    top: 10px;
+    display: none;
+    border: none;
+}
+.fa-times{
+    color:cadetblue;
+    font-size: 28px;
+}
+.dropdownClose{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    background-color: whitesmoke;
+    border: none;
+}
+.fa-bars{
+    color: whitesmoke;
+    font-size: 30px;
+}
+.dropdown{
+    position: relative;
+    top: 20px;
+    right: 25px; 
+    border: none;
+    background-color: cadetblue;
+}
+.dropdownOptions{
+    width: 120px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    top: 25px;
+}
+.dropdownOptionsList{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+.dropdownOptionsList>li{
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+}
+.dropdownOptionsList>li>a{
+    color: cadetblue;
+    text-decoration: none;
+}
 }

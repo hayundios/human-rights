@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="fonts/all.css">
+    <title>Our goals</title>
+</head>
+<header>
+    <nav>
+        <div class="navleft"> 
+            <ul>
+            <img src="images/Logo.jpeg" alt="" class="navlogo">
+            </ul>
+            <h3> EMORHD HUMAN RIGHTS DEFENDER</h3>
+        </div> <!-- left part of nav-->
+    
+        <div class="navright">
+            <ul>
+                <li>
+                    <a href="index.html" class="navoptions">Home</a>
+                </li>
+                <li>
+                    <a href="goals.html" class="navoptions">Our goals</a>
+                </li>
+                <li>
+                    <a href="#emailUs" class="navoptions">Email Us</a>
+                </li>
+                <li>
+                    <a href="#contacts" class="navoptions">Contacts</a>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="mobileScreenNav">
+            <div >
+               <button class="dropdown" id="dropdown" onclick="showDropdown()"> 
+                <i class="fa fa-bars" ></i></button>
+            </div>
+            <div class="dropdownBox" id="dropdownBox"><!--dropdown options-->
+               <button class="dropdownClose" onclick="hideDropdown()"> <i class="fa fa-times"></i>
+            </button>
+                <div class="dropdownOptions">
+                    <ul class="dropdownOptionsList">
+                        <li> <a href="index.html" >Home</a> </li>
+                        <li> <a href="goals.html" >Our goals</a> </li>
+                        <li> <a href="#emailUs" >Email Us</a> </li>
+                        <li> <a href="#footer" >Contacts</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+        <div class="content">
+            <h2>Goals</h2>
+                
+        </div>
+
+
+        <footer id="footer">
+            <div class="footer-1">
+                <div class="address">
+                    <h3>NATIONAL SECRETARIAT</h3>
+                    <P>PLOT 1/2 Human Right Close,Ogungbade Road, Onihale Phase II, Ifo, Ogun state.</P>
+                    <br>
+                    <h3>LAGOS STATE BRANCH:</h3>
+                    <P>No 45, Adewunmi Adebiyi Street, Araromi B/Stop, Iyana Ipaja, Lagos.</P>
+                    <br>
+                    <h3>OGUN STATE BRANCH</h3>
+                    <P>Plot 6/8 Fadunsin/Arepo Road, Ogba'yo Ijoko</P>
+                    <br>
+                    <h3>ALL OUR ANNEXES</h3>
+                    <P class="annexes">Shonde Unit, Ilupeju Unit, Ilaro Unit, Owode-Yewa Unit, Ota Unit, Oluke Unit, Ibafo Unit, Ogbayo-Ikorodu Unit.</P>
+                </div>
+            </div>  
+            <div class="footer-up">
+                        <div class="f-up1"></div>
+                        <div class="f-up2"></div>
+            </div>
+        <div class="footer-2">
+            <div class="telephone">
+                <h3>CALL US ON</h3>
+                <P >07088865558</P>
+                <P>08027774155</P>
+                <P>08029235070</P>
+                <P>09023242326</P>
+            </div>
+                    <div class="whatsapp">
+                        <h3>Whatsapp</h3>
+                        <p>07088865558</p>
+                    </div>
+                <div class="facebook">
+                    <h3>Facebook</h3>
+                    <p>emorh/facebook</p>
+                </div>
+        </div>
+     </footer>
+
+
+
+
+     <script>
+         //for dropdown
+         console.log('loner')
+                function showDropdown(){
+                 document.getElementById('dropdownBox').style.display = 'block';
+                 document.getElementById('dropdown').style.display = 'none';  
+                }
+                function hideDropdown(){
+                    document.getElementById('dropdownBox').style.display = 'none';
+                    document.getElementById('dropdown').style.display = 'block';
+                }
+     </script>
+</body>
+</html>
