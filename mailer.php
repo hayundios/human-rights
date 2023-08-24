@@ -13,15 +13,15 @@ try{
     //server settings
 $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 $mail->isSMTP();          
-$mail->Host      ='smtp.gmail.com';
+$mail->Host      ='email-smtp.us-east-1.amazonaws.com';
 $mail->SMTPAuth  =true;
-$mail->Username  ='tjohn.dev4@gmail.com';
-$mail->Password  ='Tiny1234!@#';
-$mail->SMTPSecure = PHPMailer:: ENCRYPTION_SMTPS;
+$mail->Username  ='AKIAVL6JXZDGAGWIM3VG';
+$mail->Password  ='oHl4bthnsECE+ye/oP4s2WVg7dwf0HIn/Ai3pJws';
+$mail->SMTPSecure = 'tls';
 $mail->Port       = 587;
 
 //Recipients
-$mail ->setFrom('tjohn.dev4@gmail.com', 'Mailer');
+$mail ->setFrom('tosinjohn26@gmail.com', 'Mailer');
 $mail ->addAddress('cealcmod77@gmail.com', 'myuser');
 
 //content

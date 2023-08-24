@@ -1,217 +1,290 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="fonts/all.css">
-    <title> Welcome to EMORH</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="fonts/all.css" />
+    <title>Welcome to EMORH</title>
+  </head>
+
+  <header>
+    <nav>
+      <div class="navleft">
+        <ul>
+          <img src="images/Logo.jpg" alt="" class="navlogo" />
+        </ul>
+        <div class="navname">
+          <h4>EYIKISETEMI MOWOFIN FOUNDATION</h4>
+          <h2>HUMAN RIGHTS DEFENDER</h2>
+        </div>
+      </div>
+      <!-- left part of nav-->
+
+      <div class="navright">
+        <ul>
+          <li>
+            <a href="index.html" class="navoptions">Home</a>
+          </li>
+          <li>
+            <a href="goals.html" class="navoptions">Our goals</a>
+          </li>
+          <li>
+            <a href="services.html" class="navoptions">Services</a>
+          </li>
+          <li>
+            <a href="contacts.html" class="navoptions">Contacts</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mobileScreenNav">
+        <div>
+          <button class="dropdown" id="dropdown" onclick="showDropdown()">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <div class="dropdownBox" id="dropdownBox">
+          <!--dropdown options-->
+          <button class="dropdownClose" onclick="hideDropdown()">
+            <i class="fa fa-times"></i>
+          </button>
+          <div class="dropdownOptions">
+            <ul class="dropdownOptionsList">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="goals.html">Our goals</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contacts.html ">Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <div class="section">
+      <div class="motto">
+        <div class="mottoChild">
+          <div class="mottoLeft">
+            <h3>Aluta Continua!</h3>
+            <h3>Victoria est certa!</h3>
+          </div>
+          <div class="mottoRight">
+            <h2>SAY IT ,MY OWN ,YOUR OWN</h2>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="whyproblems">
+          <h2>Why problems on your:</h2>
+          <br />
+          <p>
+            *Landlord/tenant Disputes *Employer/Employee Disputes *Unlawful
+            Retrenchment
+          </p>
+          <p>
+            *Employee compensation Disputes *Family Disputes(including marital)
+          </p>
+          <p>
+            *Propert Inheritance Disputes/Child custody etc *Monetary claims
+          </p>
+          <p>*Commercial Disputes *Local Disputes(Community Dispute)</p>
+          <p>*Unlawful Detention *Land Grabber (Omo Onile or Agent)</p>
+          <p>Unlawful Tax And Multiple Tax, Pension Issues</p>
+        </div>
+        <div class="report">
+          <p>REPORT TO THE ABOVE NAME</p>
+        </div>
+      </div>
+      <div class="comeFor">
+        <h3>You Can Come For:</h3>
+        <br />
+        <p>*Company Registration *Buy/Sell Properties</p>
+        <p>*Stamp Duties/Deed Agreement *Consultancy/ Free Legal Service</p>
+      </div>
+
+      <div class="formArea" id="emailUs">
+        <div class="form-image">
+          <img src="images/crying.jpg" alt="" />
+        </div>
+        <div class="form2">
+          <form method="POST" class="contactform" id="contactform">
+            <h1>Report your injustice to us.</h1>
+            <p>Confidential form</p>
+            <label for="">Name of complainant</label>
+            <input type="text" /><br />
+            <label for="">Address of complainant</label>
+            <input type="text" /><br />
+            <label for="">Phone Number</label>
+            <input type="tel" />
+            <br />
+            <label for="">Male</label>
+            <input type="checkbox" name="" id="" />
+            <br />
+            <label for="">Female</label>
+            <input type="checkbox" />
+            <br />
+            <label for="">Age</label>
+            <input type="number" />
+            <br />
+            <label for="" class="purpose">Purpose of Visiting Emohrd</label>
+            <textarea name="" id="" cols="30" rows="1"></textarea>
+            <br /><br />
+            <label for="">Occupation</label>
+            <input type="text" /><br />
+            <label for="">Name of Violator(s)</label>
+            <input type="text" />
+            <br />
+            <label for="">Address of Violator(s)</label>
+            <input type="text" />
+            <br />
+            <label for="">Phone Numbers(s) of Violator(s)(if known)</label>
+            <input type="tel" /><br />
+            <label for="">Complainant Witness Name</label>
+            <input type="text" /><br />
+            <label for="">Complainant Witness Phone Number</label>
+            <input type="tel" /><br />
+            <label for="">WHAT DO YOU WANT:</label><br />
+            <label for="">ALTERNATIVE DISPUTE RESOLUTION</label>
+            <input class="whatDoYouWantbox1" type="checkbox" /><br />
+            <label class="whatDoYouWant" for="">FAIR HEARING</label>
+            <input class="whatDoYouWantbox2" type="checkbox" /><br />
+            <label class="whatDoYouWant" for="">DIALOGUE</label>
+            <input class="whatDoYouWantbox2" type="checkbox" /><br />
+            <label class="whatDoYouWant" for="">COURT</label>
+            <input class="whatDoYouWantbox2" type="checkbox" /><br />
+
+            <input type="button" value="Submit" />
+          </form>
+        </div>
+      </div>
+
+      <div class="founders">
+        <p>Our Officials</p>
+        <div class="founderscontainers">
+          <div class="frame">
+            <img
+              src="images/Founder.jpg"
+              alt=""
+              id="frameImage"
+              onmouseover="displayInfo()"
+              onmouseout="hideInfo()"
+            />
+
+          
+          </div>
+          <!--closing tag for frame-->
+          <div class="frame">
+            <img src="images/President.jpg" alt="" />
+          </div>
+          <div class="frame">
+            <img src="images/Secretary.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <div class="footer-1">
+          <div class="address">
+            <h3>NATIONAL SECRETARIAT</h3>
+            <p>
+              PLOT 1/2 Human Right Close,Ogungbade Road, Onihale Phase II, Ifo,
+              Ogun state.
+            </p>
+            <br />
+            <h3>LAGOS STATE BRANCH:</h3>
+            <p>
+              No 45, Adewunmi Adebiyi Street, Araromi B/Stop, Iyana Ipaja,
+              Lagos.
+            </p>
+            <br />
+            <h3>OGUN STATE BRANCH</h3>
+            <p>Plot 6/8 Fadunsin/Arepo Road, Ogba'yo Ijoko</p>
+            <br />
+            <h3>ALL OUR ANNEXES</h3>
+            <p class="annexes">
+              Shonde Unit, Ilupeju Unit, Ilaro Unit, Owode-Yewa Unit, Ota Unit,
+              Oluke Unit, Ibafo Unit, Ogbayo-Ikorodu Unit.
+            </p>
+          </div>
+        </div>
+        <div class="footer-up">
+          <div class="f-up1"></div>
+          <div class="f-up2"></div>
+        </div>
+        <div class="footer-2">
+          <div class="telephone">
+            <h3>CALL US ON</h3>
+            <p>07088865558</p>
+            <p>08027774155</p>
+            <p>08029235070</p>
+            <p>09023242326</p>
+          </div>
+          <div class="whatsapp">
+            <h3>Whatsapp</h3>
+            <p>07088865558</p>
+          </div>
+          <div class="facebook">
+            <h3>Facebook</h3>
+            <p>EMOHR MOWO FIN</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--closing the section class div-->
 
     <script>
+      console.log("Loaded");
+      function displayInfo() {
+        document.getElementById("fI2").style.display = "block";
+        document.getElementById("foundersInfo").style.height = "60%";
+      }
+      function hideInfo() {
+        document.getElementById("fI2").style.display = "none";
+        document.getElementById("foundersInfo").style.height = "20%";
+      }
 
+      //for dropdown
+      console.log("loner");
+      function showDropdown() {
+        document.getElementById("dropdownBox").style.display = "block";
+        document.getElementById("dropdown").style.display = "none";
+      }
+      function hideDropdown() {
+        document.getElementById("dropdownBox").style.display = "none";
+        document.getElementById("dropdown").style.display = "block";
+      }
+
+      //sending to the backend syntax
+      let submitButton = document.getElementById("submit");
+      let contactForm = document.getElementById("contactform");
+
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let formData = new FormData();
+
+        document.querySelectorAll(".input-field").forEach((element) => {
+          formData.append(element.name, element.value); //append the data in input fields to each field
+        });
+
+        let requestUrl =
+          "http://localhost/human-rights/create-consultation.php";
+
+        fetch(requestUrl, {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((response) => {
+            console.log("Response:", response);
+            showResponseMessage();
+          })
+          .catch((error) => {
+            console.log("Error:", error);
+            errorMessage();
+          });
+      });
     </script>
-</head>
-    
-    <header>
-        <nav>
-            <div class="navleft"> 
-                <ul>
-                <img src="images/Logo.jpeg" alt="" class="navlogo">
-                </ul>
-                <h3> EMORH HUMAN RIGHTS DEFENDER</h3>
-            </div> <!-- left part of nav-->
-        
-            <div class="navright">
-                <ul>
-                    <li>
-                        <a href="index.html" class="navoptions">Home</a>
-                    </li>
-                    <li>
-                        <a href="goals.html" class="navoptions">Our goals</a>
-                    </li>
-                    <li>
-                        <a href="#emailUs" class="navoptions">Email Us</a>
-                    </li>
-                    <li>
-                        <a href="#footer" class="navoptions">Contacts</a>
-                    </li>
-                </ul>
-            </div>      
-                        <div class="mobileScreenNav">
-                        <div >
-                           <button class="dropdown" id="dropdown" onclick="showDropdown()"> 
-                            <i class="fa fa-bars" ></i></button>
-                        </div>
-                        <div class="dropdownBox" id="dropdownBox"><!--dropdown options-->
-                           <button class="dropdownClose" onclick="hideDropdown()"> <i class="fa fa-times"></i>
-                        </button>
-                            <div class="dropdownOptions">
-                                <ul class="dropdownOptionsList">
-                                    <li> <a href="index.html" >Home</a> </li>
-                                    <li> <a href="goals.html" >Our goals</a> </li>
-                                    <li> <a href="#emailUs" >Email Us</a> </li>
-                                    <li> <a href="#contacts" >Contacts</a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-        </nav>
-    </header>
-    <body>
-    <div class="section">
-        <div class="about">
-            <div class="whyproblems">
-                <h2>Why problems on your:</h2>
-                <br>
-                <p>*Landlord/tenant Disputes *Employer/Employee Disputes *Unlawful Retrenchment</p>
-                <p>*Employee compensation Disputes *Family Disputes(including marital)</p>
-                <p>*Propert Inheritance Disputes/Child custody etc *Monetary claims</p>
-                <p>*Commercial Disputes *Local Disputes(Community Dispute)</p>
-                <p>*Unlawful Detention *Land Grabber (Omo Onile or Agent)</p>
-                <p>Unlawful Tax And Multiple Tax, Pension Issues</p>
-            </div>
-        </div>
-    
-        <div class="formArea" id="emailUs">
-            <div class="form-image">
-                <img src="images/WhatsApp Image 2023-02-04 at 12.39.10 PM.jpeg" alt="">
-            </div>
-            <div class="form2" >
-                <form  method="POST" class="contactform" id="contactform">    
-                    <h1>Report to us</h1>
-                    <p style="color:navy;">You can email us and hear from us directly.</p>
-                        <input class="input-field" type="text" placeholder="Firstname" name="firstName">
-                        <input class="input-field" type="text" placeholder="Lastname" name="lastName">
-                        <input class="input-field" type="email" placeholder="Your E-mail" name="eMail">
-                        <input class="input-field" type="tel" placeholder="Your Phone" name="phone">
-                        <label for="states">Practice area:</label>
-                        <select id="states">
-                            <option name="" id="">Lagos</option>
-                            <option name="" id="">Abuja</option>
-                            <option name="" id="">Oyo</option>
-                        </select>
-                        <textarea class="input-field" id="formcommenttarea" placeholder="Your Message" name="comment"></textarea>
-                        <button type="submit" name="submit" id="submit">Submit</button>
-                </form>
-               
-            </div>
-        </div>
-
-    <div class="founders">
-        <p>Our Officials</p>
-             <div class="founderscontainers">
-        <div class="frame">
- <img src="images/WhatsApp Image 2023-02-04 at 12.39.10 PM.jpeg" alt="" id="frameImage" onmouseover="displayInfo()" onmouseout="hideInfo()">
-          
-            <div id="foundersInfo" class="foundersInfo" onmouseover="displayInfo()" onmouseout="hideInfo()">
-                <div class="fI1"><p>Michael Ajafeto</p><span>President</span></div>
-                <div class="fI2" id="fI2" > 
-
-            </div>
-        </div>
-        </div><!--closing tag for frame-->  
-        <div class="frame"></div>
-        <div class="frame"></div>
-            </div>
-    </div>
-                        
-         <footer id="footer">
-                <div class="footer-1">
-                    <div class="address">
-                        <h3>NATIONAL SECRETARIAT</h3>
-                        <P>PLOT 1/2 Human Right Close,Ogungbade Road, Onihale Phase II, Ifo, Ogun state.</P>
-                        <br>
-                        <h3>LAGOS STATE BRANCH:</h3>
-                        <P>No 45, Adewunmi Adebiyi Street, Araromi B/Stop, Iyana Ipaja, Lagos.</P>
-                        <br>
-                        <h3>OGUN STATE BRANCH</h3>
-                        <P>Plot 6/8 Fadunsin/Arepo Road, Ogba'yo Ijoko</P>
-                        <br>
-                        <h3>ALL OUR ANNEXES</h3>
-                        <P class="annexes">Shonde Unit, Ilupeju Unit, Ilaro Unit, Owode-Yewa Unit, Ota Unit, Oluke Unit, Ibafo Unit, Ogbayo-Ikorodu Unit.</P>
-                    </div>
-                </div>  
-                <div class="footer-up">
-                            <div class="f-up1"></div>
-                            <div class="f-up2"></div>
-                </div>
-            <div class="footer-2">
-                <div class="telephone">
-                    <h3>CALL US ON</h3>
-                    <P >07088865558</P>
-                    <P>08027774155</P>
-                    <P>08029235070</P>
-                    <P>09023242326</P>
-                </div>
-                        <div class="whatsapp">
-                            <h3>Whatsapp</h3>
-                            <p>07088865558</p>
-                        </div>
-                    <div class="facebook">
-                        <h3>Facebook</h3>
-                        <p>emorh/facebook</p>
-                    </div>
-            </div>
-         </footer>
-   </div> <!--closing the section class div-->
-
-   
-            <script>
-                console.log('Loaded')
-              function displayInfo(){
-                document.getElementById('fI2').style.display = 'block';
-                document.getElementById('foundersInfo').style.height = '60%';
-              }
-              function hideInfo(){
-                document.getElementById('fI2').style.display= 'none';
-                document.getElementById('foundersInfo').style.height = '20%';
-              }
-
-                //for dropdown
-                console.log('loner')
-                function showDropdown(){
-                 document.getElementById('dropdownBox').style.display = 'block';
-                 document.getElementById('dropdown').style.display = 'none';  
-                }
-                function hideDropdown(){
-                    document.getElementById('dropdownBox').style.display = 'none';
-                    document.getElementById('dropdown').style.display = 'block';
-                }
-
-
-               //sending to the backend syntax
-              let submitButton = document.getElementById('submit');
-              let contactForm = document.getElementById('contactform');
-
-              contactForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-
-               
-                let formData = new FormData();
-                
-                document.querySelectorAll('.input-field').forEach(element => {
-                    formData.append(element.name, element.value) //append the data in input fields to each field
-                });
-                
-                let requestUrl = 'http://localhost/human-rights/create-consultation.php';
-
-                fetch(requestUrl, {
-                    method: "POST",
-                    body: formData
-                }).then(response => response.json()).then(response => {
-                    console.log("Response:", response)
-                    showResponseMessage()
-                }).catch(error => {
-                    console.log('Error:', error)
-                    errorMessage()
-                })
-             })
-
-
-          
-            </script>
-
-</body>
+  </body>
 </html>
